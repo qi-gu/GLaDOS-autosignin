@@ -15,6 +15,7 @@ except:
 	except:
 		file.write('fail')
 		input('断网了！')
+		exit(1)
 file.write(x.text)
 if not (("Checkin! Get 1 Day" in x.text) or ('Please Try Tomorrow' in x.text)):
 	print(x.text)
