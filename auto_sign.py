@@ -8,10 +8,10 @@ port = ''	# 填入clash中的端口号
 cookie = {'koa:sess': '', 'koa:sess.sig': ''}	# 填入GLaDOS网页对应的cookie
 proxy = {'http': '127.0.0.1:' + port, 'https': '127.0.0.1:' + port}
 try:
-	x = post('https://glados.rocks/api/user/checkin', cookies=cookie, headers=header, data='{"token":"glados.network"}')
+	x = post('https://glados.rocks/api/user/checkin', cookies=cookie, headers=header, data='{"token":"glados.one"}')
 except:
 	try:
-		x = post('https://glados.rocks/api/user/checkin', cookies=cookie, headers=header, data='{"token":"glados.network"}', proxies=proxy)	# 防止开了系统代理
+		x = post('https://glados.rocks/api/user/checkin', cookies=cookie, headers=header, data='{"token":"glados.one"}', proxies=proxy)	# 防止开了系统代理
 	except:
 		file.write('fail')
 		input('断网了！')
